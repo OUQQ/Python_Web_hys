@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.js" integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <a class="navbar-brand" href="#">Logo</a>
+        <a class="nav-link" href="add">Add</a>
+        <form method="post" action="find" class="form-inline my-2 my-lg-0">
+            <input name="songname" class="form-control mr-sm-2" type="text" placeholder="Search by song name">
+            <button class = "btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </nav>
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>
